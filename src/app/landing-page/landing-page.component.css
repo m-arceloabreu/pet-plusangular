@@ -1,0 +1,171 @@
+*{
+    font-family: 'Dosis', sans-serif;
+}
+* h2{
+    font-size: 55px;
+    color: #61413e;
+}
+* p{
+    font-size: 20px;
+}
+
+/* HERO SECTION SECTION*/
+.hero{
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+.hero-img{
+    margin: 0;
+    padding: 0;
+    display: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.hero-section{
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    padding-inline: 5vw;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section h1{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    color: #61413e;
+    text-shadow: 0px 0px 5px  #61413e;
+}
+.hero-section h4{
+    margin-bottom: 20px;
+}
+.hero-section button{
+    margin-top: 20px;
+}
+
+.hero-aside{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.hero-aside img{
+    width: 80%;
+    height: 80%;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px  #61413e;
+}
+/* ABOUT SECTION*/
+.about{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.about-img{
+    display: fixed;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+/* OUR TEAM SECTION*/
+.our-team{
+    margin: 0;
+    padding: 20px;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+
+.our-team-img{
+    display: fixed;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+.our-team__card-grid{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.card{
+    width: 22%;
+    height: 95%;
+    border-radius: 15px;
+    display: flex;
+    background-color: #ebb36596;
+    box-shadow: 0px 0px 10px  #61413e;
+    flex-direction: column;
+    padding: 15px;
+    color: #61413e;
+    text-decoration: none;
+    transition: 0.5s ease-in;
+}
+.card:hover{
+    width: 25%;
+    height: 105%;
+}
+.card img{
+    size: fixed 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px  #61413e;
+}
+.card-text{
+    padding:15px;
+}
+.card-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/*  CONTACT SECTION */
+.contact{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.contact-img{
+    display: fixed;
+    position: absolute;
+    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+

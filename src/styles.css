@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+background-color 1 : #fad39c;
+background-color2 : #ffff;
+
+*/
+.form-size{
+    width: 70%;
+}
+
+.form-field{
+    margin-top: 5%;
+    width: 80%;
+}
+.bg-dark-brown{
+ background-color: #61413E;
+}
+
+.btn-outside-border{
+    background-color: white;
+    border-color: #61413E;
+    color: #61413E;
+    padding: 2%;
+    padding-inline: 6%;
+    border-radius: 8px;
+}
+.btn-inside-color{
+    background-color:  #61413E;
+    box-shadow: none;
+    border: 1px solid;
+    color: #fff;
+    padding: 2%;
+    padding-inline: 6%;
+    border-color: #61413E;
+    border-radius: 8px;
+}
