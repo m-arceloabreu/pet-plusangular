@@ -1,5 +1,9 @@
+
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +19,8 @@ import { VetFinalizarcadastroComponent } from './vet-finalizarcadastro/vet-final
 import { VetGerenciarclinicaComponent } from './vet-gerenciarclinica/vet-gerenciarclinica.component';
 import { VetRelatoriosComponent } from './vet-relatorios/vet-relatorios.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +34,18 @@ import { VetRelatoriosComponent } from './vet-relatorios/vet-relatorios.componen
     VetCadastroClinicaComponent,
     VetFinalizarcadastroComponent,
     VetGerenciarclinicaComponent,
-    VetRelatoriosComponent
+    VetRelatoriosComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

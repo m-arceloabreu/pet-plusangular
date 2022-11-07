@@ -4,15 +4,14 @@
           <div class="sign-in__form-sign-in">
             <h1> Register here!</h1>
             <div class="mb-3 form-size">
-              <input type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="Name">
-              <input type="email" class="form-control form-field" id="exampleFormControlInput1" placeholder="name@example.com">
-              <input type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Password">
-              <input type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Confirm Password">
-              <input type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="CPF">
-              <input type="date" class="form-control form-field" id="exampleFormControlInput1" placeholder="Birth Date">
+              <input [(ngModel)]="vet.nome" type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="Name">
+              <input [(ngModel)]="vet.email" type="email" class="form-control form-field" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input (input)='confirmSenha($event)' type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Password">
+              <input [(ngModel)]="vet.senha" type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Confirm Password">
+              <input [(ngModel)]="vet.cpf" type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="CPF">
               <div class="btn-group">
-                <button class="btn-outside-border "> Cancel </button>
-                <button class="btn-inside-color "> Sign Up</button>
+                <button routerLink="/sign-in" class="btn-outside-border "> Cancel </button>
+                <button class="btn-inside-color " (click)="cadastrar()"> Sign Up</button>
               </div>
               
             </div>

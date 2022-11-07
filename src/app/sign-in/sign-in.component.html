@@ -6,13 +6,15 @@
         <div class="sign-in__form-sign-in">
             <h1>Log In</h1>
             <div class="mb-3 form-size">
-              <input type="email" class="form-control form-field" id="exampleFormControlInput1" placeholder="name@example.com">
-              <input type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Password">
+              <label for="inputEmail"></label>
+              <input [(ngModel)]="vetLogin.usuario" type="email" class="form-control form-field" id="inputEmail" name="email" placeholder="name@example.com">
+              <label for="inputSenha"></label>
+              <input [(ngModel)]="vetLogin.senha" type="password" class="form-control form-field" id="inputSenha" name="senha" placeholder="Password">
               <div class="btn-group">
-                  <button class="btn-outside-border "> Cancel </button>
-                  <button class="btn-inside-color "> Sign in</button>
+                  <button routerLink="/landing-page" class="btn-outside-border"> Cancel </button>
+                  <button class="btn-inside-color" (click)="entrar()"> Sign in</button>
               </div>
-                <p>Are you new here? <a href="">Sign up for free</a> </p>
+                <p>Are you new here? <a routerLink="/sign-up">Sign up for free</a> </p>
             </div>
            
         </div>
