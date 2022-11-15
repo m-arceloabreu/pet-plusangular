@@ -1,0 +1,197 @@
+body{
+    background:  rgba(235, 179, 101, 0.26);
+}
+.sub_header{
+    height:5%;
+    display: flex;
+    background-color: #61413E;
+    align-items: center;
+    justify-content: center;
+}
+.sub_navigation_header{  
+    gap: 2em;
+    margin-left: 10px;
+}
+.sub_navigation_header a{ 
+    margin-left: 20px; 
+    font-family: 'dosis-regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #EBB365;
+}
+
+
+/**--------------------------- PERFIL LATERAL--------------------------*/
+.col-md-
+.container{
+    display: flex;
+    flex-wrap: wrap;  
+    height: 100%;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    
+}
+.sidemenu{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    
+}
+
+.eclipse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    
+    border-radius: 100%;
+    background: #D9D9D9;
+}
+.eclipse-align{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eclipse img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+.nomeUsuario{
+    font-family: 'dosis-regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 61px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: #61413E;
+}
+.item1 {
+    background: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 1% 1% 3%;
+
+}
+
+.item1 a{
+    background: rgba(235, 179, 101, 0.12);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'dosis-regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #61413E;
+    margin: 1% 1% 3% 1%;
+}
+
+/*------------------------------HOMEPAGE CONTENT-----------------------------*/
+.homepage-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+
+}
+.homepage-content a, h2{
+    text-decoration: none;
+    padding: 10px;
+    color: #61413E;
+    font-family: 'Dosis-regular';
+}
+.homepage-content h2{
+    font-size: 35px;
+}
+.homepage-content a {
+    background-color: #ebb365be;
+    font-size: 20px;
+    padding-inline: 300px;
+    border-radius: 5px;
+
+}
+
+
+
+/* FORMULARIO */
+
+.formulario-content{
+    width: 100%;
+    height: 100%;
+    padding-inline: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+.formulario-content-2line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.formulario-content-2line-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.formulario-content-2line-group-start{
+    width: 70%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.formulario-content-2line-group-end{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-content #label{
+    display: flex;
+    justify-content: left;
+}
+
+
+.formulario-content-input-big{
+    width: 100%;
+}
+.formulario-content-input-medium{
+    width: 100%;
+}
+.formulario-content-input-medium-start{
+    margin-right: 5%;
+    width: 95%;
+}
+.btn-group{
+    width: 50%;
+    display: flex;
+    flex-direction:row;
+    gap: 5%;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+}

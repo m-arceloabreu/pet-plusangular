@@ -1,0 +1,41 @@
+
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse ">
+                        <img src="{{clinica.imagem}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">{{nome}}</label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/vet-gerenciarclinica">Gerenciar clínica</a>
+                 </div>
+            </div>
+        </div>
+
+        <!--Content-->
+        <div class="col-md-9">
+            <div class="homepage-content">
+                <h2>Cadastre seu Serviço</h2>
+
+                <div class="formulario-content">
+                <label for="nome" class="mb-0">Nome Serviço:</label>
+                <input [(ngModel)]="serv.tipoServico" id="tipoServico"
+                    name="tipoServico" type="text" class="form-control form-control-sm formulario-content-input-big">
+
+                <label for="valor" class="mb-0" >Valor: (R$: )</label>
+                <input [(ngModel)]="serv.valor" id="valor"
+                        name="valor" type="text" class="form-control form-control-sm formulario-content-input-big" placeholder=" 00.00">
+            </div>
+                <div class="btn-group">
+                <button routerLink="/vet-gerenciarclinica" class="btn-outside-border "> Cancelar </button>
+                <button class="btn-inside-color " (click)="cadastrarServicos()"> Cadastrar Serviço</button>
+              </div>
+        </div>
+        </div>
+    </div>
+</body>

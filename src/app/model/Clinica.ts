@@ -13,7 +13,7 @@ export class Clinica{
     public cidade: string
     public uf: string
     public imagem: string
-    public servico: Servico
+    public servicoClinica: Servico[]
     public veterinario: Veterinario
 
 }

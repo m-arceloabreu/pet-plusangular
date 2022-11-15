@@ -9,6 +9,7 @@ import { VetFinalizarcadastroComponent } from './vet-finalizarcadastro/vet-final
 import { VetGerenciarclinicaComponent } from './vet-gerenciarclinica/vet-gerenciarclinica.component';
 import { VetHomepageComponent } from './vet-homepage/vet-homepage.component';
 import { VetRelatoriosComponent } from './vet-relatorios/vet-relatorios.component';
+import { VetServicosComponent } from './vet-servicos/vet-servicos.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "landing-page", pathMatch: "full"},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: "vet-finalizarcadastro", component: VetFinalizarcadastroComponent},
   {path: "vet-gerenciarclinica", component: VetGerenciarclinicaComponent},
   {path: "vet-relatorios", component: VetRelatoriosComponent},
-  {path: "vet-agendamentos", component: VetAgendamentosComponent}
+  {path: "vet-agendamentos", component: VetAgendamentosComponent},
+  {path: "vet-servicos", component:VetServicosComponent}
 ];
 
 @NgModule({

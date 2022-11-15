@@ -19,6 +19,7 @@ import { VetFinalizarcadastroComponent } from './vet-finalizarcadastro/vet-final
 import { VetGerenciarclinicaComponent } from './vet-gerenciarclinica/vet-gerenciarclinica.component';
 import { VetRelatoriosComponent } from './vet-relatorios/vet-relatorios.component';
 import { VetAgendamentosComponent } from './vet-agendamentos/vet-agendamentos.component';
+import { VetServicosComponent } from './vet-servicos/vet-servicos.component';
 
 
 
@@ -37,6 +38,7 @@ import { VetAgendamentosComponent } from './vet-agendamentos/vet-agendamentos.co
     VetGerenciarclinicaComponent,
     VetRelatoriosComponent,
     VetAgendamentosComponent,
+    VetServicosComponent,
   ],
   imports: [
     BrowserModule,
