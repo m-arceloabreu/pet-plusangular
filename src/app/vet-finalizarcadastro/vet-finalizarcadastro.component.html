@@ -1,77 +1,106 @@
-<header>
-    <div class="sub_header" id="sub_header">
-        <div class="sub_navigation_header">
-            <a href="#">Meu Perfil</a>
-            <a href="#">Clinica Registrada</a>
-            <a href="#">Sair</a>
-        </div>
-    </div>
-</header>
 
-<div class="row">
-    <div class="col-md-3">
-        <div class="row item1">
-            <div class="col-md-12">
-                <div class="eclipse"></div>
-            </div>
-            <div class="col-md-12">
-                <label class="nomeUsuario">Xpto da Silva</label>
-            </div>
-            <div class="col-md-12">
-               <a href="# ">Pet Registrados</a>
-            </div>
-            <div class="col-md-12">
-                <a href="# ">Agendamentos</a>
+
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse ">
+                        <img src="{{imagem}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">{{nome}}</label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/vet-gerenciarclinica">Gerenciar clínica</a>
+                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-9">
-        <div class="row item2">
-            <div class="col-md-12 content">
-                 <h2> Complete Seu Cadastro</h2>
-            </div>
-            <div class="col-md-12">
-                <label class="campo">RG</label>
-                <input type="text" placeholder="Preencha seu RG" name="nome" id="nome">
-            </div>
-            <div class="col-md-12">
-                <label class="campo">Imagem Perfil</label>
-                <input type="text" placeholder="Insira a URL da Imagem" name="email" id="email">
-            </div>
-            <div class="col-md-12">
-                <label class="campo">Telefone</label>
-                <input type="text" placeholder="Digite seu telefone" name="telefone" id="telefone">
-            </div>
-            <div class="col-md-12">
-                <label class="campo">Endereço</label></div>
-            <div class="col-md-9">
-                <input type="text" placeholder="Rua" name="rua" id="rua">
-            </div>
-            <div class="col-md-3 ">
-                <input type="number" class="ajuste" placeholder="Numero" name="number" id="number">
-            </div>
-            <div class="col-md-9">
-                <input type="text" placeholder="Bairro" name="bairro" id="bairro">
-            </div>
-            <div class="col-md-3">
-                <input type="text" class="ajuste" placeholder="CEP" name="cep" id="cep">
-            </div>
-            <div class="col-md-9">
-                <input type="text" placeholder="Cidade" name="cidade" id="cidade">
-            </div>
-            <div class="col-md-3">
-                <input type="text" class="ajuste" placeholder="UF" name="uf" id="uf">
-            </div>
-            <div class="col-md-12">
-                <div class="row button">
-                    <div class="col-sm-6">
-                        <button type="button"  class="cancelar">Cancelar</button>
+
+        <!--Content-->
+        <div class="col-md-9">
+            <div class="homepage-content">
+                <h2>Complete seu Cadastro</h2>
+
+                <div class="formulario-content">
+                <label for="nome" class="mb-0">Nome:</label>
+                <input [(ngModel)]="vet.nome" id="nome"  (change)="nomeChange($event)"
+                    name="nome" type="text" class="form-control form-control-sm formulario-content-input-big">
+
+                <label for="email" class="mb-0" >Email:</label>
+                <input disabled [(ngModel)]="vet.email" id="rg"
+                        name="email" type="text" class="form-control form-control-sm formulario-content-input-big">
+
+                <label for="cpf" class="mb-0">CPF:</label>
+                <input disabled [(ngModel)]="vet.cpf" id="cpf"
+                        name="cpf" type="text" class="form-control form-control-sm formulario-content-input-big">
+                
+                <label for="senha" class="mb-0 ">Senha:</label>
+                <input [(ngModel)]="vet.senha"  (change)="senhaChange($event)" id="senha"
+                            name="senha" type="password" class="form-control form-control-sm formulario-content-input-big">
+
+                <label for="cpf" class="mb-0">Telefone:</label>
+                <input  [(ngModel)]="vet.telefone" id="telefone" (change)="telefoneChange($event)"
+                        name="telefone" type="text" class="form-control form-control-sm formulario-content-input-big">
+                
+                <div class="formulario-content-2line">
+                    <div class="formulario-content-2line-group">
+                        <label for="rg" class="mb-0">RG:</label>
+                        <input [(ngModel)]="vet.rg"  (change)="rgChange($event)" id="rg"
+                            name="rg" type="text" class="form-control form-control-sm formulario-content-input-medium-start">
                     </div>
-                    <div class="col-sm-6">
-                        <button type="button"  class="cadastrar">Cadastrar</button>
+                    <div class="formulario-content-2line-group">
+                        <label for="crmv" class="mb-0">CRMV:(Somente Numeros)</label>
+                        <input [(ngModel)]="vet.crmv"  (change)="crmvChange($event)" id="crmv"
+                                name="crmv" type="text" class="form-control form-control-sm formulario-content-input-medium">
                     </div>
+                </div>
+                
+                <label for="imagem" class="mb-0">Imagem:</label>
+                <input [(ngModel)]="vet.imagem"  (change)="imagemChange($event)" id="imagem"
+                        name="imagem" type="text" class="form-control form-control-sm formulario-content-input-big">
+                
+                
+                <div class="formulario-content-2line">
+                    <div class="formulario-content-2line-group-start">
+                        <label for="logradouro" class="mb-0">Logradouro:</label>
+                        <input [(ngModel)]="vet.logradouro"  (change)="logradouroChange($event)" id="logradouro"
+                                name="logradouro" type="text" class="form-control form-control-sm ">
+                     </div>
+                     <div class="formulario-content-2line-group-end">   
+                        <label for="numero" class="mb-0">Numero:(Somente Numeros)</label>
+                        <input [(ngModel)]="vet.numero"  (change)="numeroChange($event)" id="numero"
+                                name="numero" type="text" class="form-control form-control-sm" >
+                    </div>
+                </div>
+                
+                <label for="bairro" class="mb-0">Bairro:</label>
+                <input [(ngModel)]="vet.bairro"  (change)="bairroChange($event)" id="bairro"
+                                name="bairro" type="text" class="form-control form-control-sm">
+
+                <div class="formulario-content-2line">
+                    <div class="formulario-content-2line-group-start">
+                        <label for="cidade" class="mb-0">Cidade:</label>
+                        <input [(ngModel)]="vet.cidade"  (change)="cidadeChange($event)" id="numero"
+                                name="cidade" type="text" class="form-control form-control-sm">
+                    </div>
+                    <div class="formulario-content-2line-group-end">
+                        <label class="mb-0" for="uf">UF:</label>
+                        <select [(ngModel)]="vet.uf" class="form-control form-control-sm mb-2" name="uf" id="uf" (change)="ufChange($event)">
+                            <option selected disabled value="">Selecione a UF:</option>
+                            <option value="RS">RS</option>
+                            <option value="RJ">RJ</option>
+                            <option value="SP">SP</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            </div>
+                <div class="btn-group">
+                <button routerLink="/vet-homepage" class="btn-outside-border "> Cancelar </button>
+                <button class="btn-inside-color " (click)="editarVeterinario()"> Editar</button>
+              </div>
+        </div>
         </div>
     </div>
-</div>
+</body>

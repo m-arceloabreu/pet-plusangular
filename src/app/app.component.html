@@ -1,3 +1,4 @@
-<app-header-out></app-header-out>
+<app-header-out *ngIf='auth.logado() == true'></app-header-out>
+<!-- <app-vet-gerenciarclinica></app-vet-gerenciarclinica>-->
 <router-outlet></router-outlet>
 <app-footer></app-footer>

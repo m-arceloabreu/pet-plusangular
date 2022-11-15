@@ -11,7 +11,7 @@ export class Veterinario{
     public email: string
     public senha: string
     public telefone: string
-    public image: string
+    public imagem: string
     public logradouro: string
     public numero: number
     public bairro: string

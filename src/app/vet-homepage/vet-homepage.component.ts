@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { Veterinario } from '../model/Veterinario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-vet-homepage',
@@ -7,7 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VetHomepageComponent implements OnInit {
 
-  constructor() { }
+  vet: Veterinario = new Veterinario()
+
+
+  idVeterinario = environment.idVeterinario
+  nome = environment.nome
+  imagem = environment.imagem
+
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) {
+    if(environment.token ==''){
+      alert('Sua sessão expirou, faça o login novamente!')
+      this.router.navigate(['/sign-in'])
+    }
+   }
 
   ngOnInit(): void {
   }

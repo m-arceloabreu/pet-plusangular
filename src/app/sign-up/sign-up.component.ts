@@ -38,7 +38,7 @@ export class SignUpComponent implements OnInit {
           
         },
         error: erro => {
-          if (erro.status == 400) {
+          if (this.vet.cpf == null || this.vet.email == null || this.vet.senha == null || this.vet.nome == null ) {
             alert("Favor preencher todos os campos")
           }
         },

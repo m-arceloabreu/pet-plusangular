@@ -1,6 +1,210 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+.cores {
+    color:#ebb365;
+    color: #61413e;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+.header{
+    
+    height: 10vh;
+    position: sticky;
+    background-color: #ebb365;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 100px;
+    box-shadow: 0px 3px 2px 1px rgba(100, 100, 100, 0.2);
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: none;
+    font-size: 30px;
+    
+}
+a{
+    color: #61413e;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+.side-menu{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.menu{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+.menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.menu a{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s ease-in-out;
+}
+.menu a:hover{
+    background-color: #61413e;
+    color: #ebb365;
+    height: 100%;
+    
+}
 
 
+
+
+@media screen and (max-width: 500px) {
+    
+.header{
+    background-color: #ebb365;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 80px;
+    padding: 0;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Dosis', sans-serif;
+    color: #61413e;
+}
+.side-menu{
+    display: none;
+    top: 0;
+    left: 0;
+    /* opacity: 0; */
+}
+
+.hamb{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+.hamb-line{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #61413e;
+    transition: 0.25s ease-in-out;
+}
+.hamb .hamb-line:nth-child(2){
+    top: 0px;
+}
+.hamb .hamb-line:nth-child(2){
+    top: 8px;
+}
+.hamb .hamb-line:nth-child(3){
+    top: 16px;
+}
+
+.side-menu:checked + .hamb .hamb-line:nth-child(1){
+    top: 8px;
+    transform: rotate(-45deg);
+}
+.side-menu:checked + .hamb .hamb-line:nth-child(2){
+    opacity: 0;
+}
+.side-menu:checked + .hamb .hamb-line:nth-child(3){
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+/* fim button checked*/
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    display: none;
+}
+.side-menu:checked ~ .nav{
+    
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+    background: #ebb365;
+    opacity: 80%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 80vh;
+    padding: 0;
+    margin-top: 5vh;
+}
+.menu li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+ a{
+    text-transform: uppercase;
+    color: #61413e;
+    font-family: 'Dosis', sans-serif;;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+}
+
+
+/*SIGN IN COMPONENT*/
 .row-main{
     font-family: 'Dosis', sans-serif;
     color:#61413E;

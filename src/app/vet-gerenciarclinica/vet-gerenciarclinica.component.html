@@ -1,1 +1,40 @@
-<p>vet-gerenciarclinica works!</p>
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse ">
+                        <img src="{{clinica.imagem}} " alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario"> {{nome}}</label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/vet-gerenciarclinica">Gerenciar clínica</a>
+                 </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="homepage-content">
+                <h2> {{clinica.nome}}</h2>
+
+                <div class="card-group-clinica">
+                    <div class="card-clinica" routerLink="/vet-agendamentos">
+                        <img src="https://i.imgur.com/I69ja6E.png" alt="">
+                        <h3>Serviços</h3>
+                    </div>
+                    <div class="card-clinica" routerLink="/vet-agendamentos">
+                        <img src="https://i.imgur.com/30eTXaY.png" alt="">
+                        <h3>Agendamentos</h3>
+                    </div>
+                    <div class="card-clinica" routerLink="/vet-relatorios">
+                        <img src="https://i.imgur.com/XCiEAbI.png" alt="">
+                        <h3>Relatórios</h3>
+                    </div>
+                </div>
+                
+               
+            </div>
+
+        </div>

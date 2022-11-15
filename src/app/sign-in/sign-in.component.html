@@ -1,3 +1,25 @@
+<header class="header">
+  <a class="logo" href="">
+      <img src="https://i.imgur.com/NeLm4KM.png" width="40px" height="40px"
+       alt="">Pet Plus</a>
+  
+  <input class="side-menu" type="checkbox" id="checkbox-menu">
+  <label for="checkbox-menu" class="hamb">
+      <span class="hamb-line"> </span>
+      <span class="hamb-line"> </span>
+      <span class="hamb-line"> </span>
+  </label>
+  <nav class="nav">
+      <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#sobre">About</a></li>
+          <li><a href="#contact"> Contact</a></li>
+          <li><a href="#ourteam"> Know Us</a></li>
+          <li><a routerLink="/sign-in"> Sign In</a></li>
+          
+      </ul>
+  </nav>
+</header>
 <div class="container-fluid ">
     <div class="row justify-content-center  row-main">
       <div class="sign-in__image-and-logo col text-center">
@@ -7,7 +29,7 @@
             <h1>Log In</h1>
             <div class="mb-3 form-size">
               <label for="inputEmail"></label>
-              <input [(ngModel)]="vetLogin.usuario" type="email" class="form-control form-field" id="inputEmail" name="email" placeholder="name@example.com">
+              <input [(ngModel)]="vetLogin.email" type="email" class="form-control form-field" id="inputEmail" name="email" placeholder="email">
               <label for="inputSenha"></label>
               <input [(ngModel)]="vetLogin.senha" type="password" class="form-control form-field" id="inputSenha" name="senha" placeholder="Password">
               <div class="btn-group">
