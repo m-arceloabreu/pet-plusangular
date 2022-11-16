@@ -28,6 +28,9 @@ import { Servico } from "../model/Servico";
     getAllServicos():Observable<Servico[]>{
       return this.http.get<Servico[]>('http://localhost:8080/servico', this.token)
     }
+    getServicoById(id: number):Observable<Servico>{
+      return this.http.get<Servico>(`http://localhost:8080/servico/id/${id}`, this.token)
+    }
     
 
     

@@ -1,1 +1,42 @@
-<p>vet-agendamentos works!</p>
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse ">
+                        <img src="{{clinica.imagem}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">{{clinica.nome}}</label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/vet-gerenciarclinica">Gerenciar clínica</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Content-->
+        <div class="col-md-9">
+            <div class="homepage-content">
+                <h2>Agendamentos</h2>
+                <div *ngFor="let agenda1 of listaAgenda" class="formulario-content-group">
+                    <div class="formulario-content">
+                    <h3>Cliente: {{agenda1.clienteAgenda.nome}}</h3>
+                    <p>Data: {{agenda1.horario}}</p>
+                    <p>Serviço: {{clinica.servicoClinica[(agenda1.servicoID -1)].tipoServico}}</p>
+                    <p>Valor: R$ {{clinica.servicoClinica[(agenda1.servicoID -1)].valor}}</p>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>

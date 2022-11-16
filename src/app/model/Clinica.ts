@@ -1,5 +1,6 @@
 import { Veterinario } from "./Veterinario";
 import { Servico } from "./Servico";
+import { Agenda } from "./Agenda";
 
 export class Clinica{
     
@@ -15,5 +16,5 @@ export class Clinica{
     public imagem: string
     public servicoClinica: Servico[]
     public veterinario: Veterinario
-
+    public agenda: Agenda[]
 }
