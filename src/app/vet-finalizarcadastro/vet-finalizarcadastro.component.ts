@@ -2,7 +2,7 @@ import { Component, EnvironmentInjector, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Veterinario } from '../model/Veterinario';
-import { VetLogin } from '../model/VetLogin';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class VetFinalizarcadastroComponent implements OnInit {
 
 
   token = environment.token
-  idVet = environment.idVeterinario 
+  idVet = environment.id 
   nome = environment.nome
   email = environment.email;
   imagem = environment.imagem;
@@ -50,7 +50,6 @@ export class VetFinalizarcadastroComponent implements OnInit {
     console.log(this.token)
     this.authService.refreshToken()
     this.buscarIdVeterinario()
-    
   }
   nomeChange(event: any){
     this.nome = event.target.value
@@ -131,7 +130,7 @@ export class VetFinalizarcadastroComponent implements OnInit {
       environment.token = ''
       environment.nome = ''
       environment.imagem = ''
-      environment.idVeterinario = 0
+      environment.id = 0
     })
   }
 }

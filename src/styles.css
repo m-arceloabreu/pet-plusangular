@@ -26,6 +26,7 @@ background-color2 : #ffff;
     padding: 2%;
     padding-inline: 6%;
     border-radius: 8px;
+    transition: .25s;
 }
 .btn-inside-color{
     background-color:  #61413E;
@@ -36,6 +37,15 @@ background-color2 : #ffff;
     padding-inline: 6%;
     border-color: #61413E;
     border-radius: 8px;
+    transition: .25s ;
+}
+.btn-outside-border:hover{
+    background-color: #61413E;
+    color: #fff;
+}
+.btn-inside-color:hover{
+    background-color: #fff;
+    color: #61413E;
 }
 
 

@@ -15,7 +15,7 @@ export class VetGerenciarclinicaComponent implements OnInit {
   clinica: Clinica = new Clinica()
   listaClinica: Clinica[]
 
-  idVeterinario = environment.idVeterinario
+  idVeterinario = environment.id
   nome = environment.nome;
   imagem = environment.imagem
   token = environment.token

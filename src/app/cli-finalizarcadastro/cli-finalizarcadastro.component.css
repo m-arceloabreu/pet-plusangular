@@ -67,7 +67,6 @@ body{
     height: 250px;
     border-radius: 100%;
 }
-
 .nomeUsuario{
     font-family: 'dosis-regular';
     font-style: normal;
@@ -125,13 +124,6 @@ body{
     color: #61413E;
     font-family: 'Dosis-regular';
 }
-.homepage-content a{
-    transition: .25s;
-}
-.homepage-content a:hover{
-background-color: #61413E;
-color: #D9D9D9;
-}
 .homepage-content h2{
     font-size: 35px;
 }
@@ -144,3 +136,62 @@ color: #D9D9D9;
 }
 
 
+
+/* FORMULARIO */
+
+.formulario-content{
+    width: 100%;
+    height: 100%;
+    padding-inline: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+.formulario-content-2line{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.formulario-content-2line-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.formulario-content-2line-group-start{
+    width: 70%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.formulario-content-2line-group-end{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-content #label{
+    display: flex;
+    justify-content: left;
+}
+
+
+.formulario-content-input-big{
+    width: 100%;
+}
+.formulario-content-input-medium{
+    width: 100%;
+}
+.formulario-content-input-medium-start{
+    margin-right: 5%;
+    width: 95%;
+}
+.btn-group{
+    width: 50%;
+    display: flex;
+    flex-direction:row;
+    gap: 5%;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: center;
+}

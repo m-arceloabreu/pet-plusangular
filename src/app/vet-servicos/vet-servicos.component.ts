@@ -21,7 +21,7 @@ export class VetServicosComponent implements OnInit {
 
   listaClinica: Clinica[]
   listaServicos: Servico[]
-  idVeterinario = environment.idVeterinario
+  idVeterinario = environment.id
   nome = environment.nome
   imagem = environment.imagem
   token = environment.token

@@ -1,95 +1,82 @@
 
-
 <body class="d-flex justify-content-center">
     <div class="row container">
         <div class="col-md-3 sidemenu">
             <div class="row item1">
                 <div class="col-md-12 eclipse-align">
-                    <div class="eclipse ">
-                        <img src="{{imagem}}" alt="">
+                    <div class="eclipse">
+                        <img src="{{cli.imagem}} " alt="">
                     </div>
                 </div>
-                <div class="col-md-12">
-                   
-                    <label class="nomeUsuario">{{nome}}</label>
+                <div class="col-md-12"> 
+                    <label class="nomeUsuario">
+                        {{cli.nome}} 
+                    </label>
                 </div>
                 <div class="col-md-12">
-                    <a routerLink="/vet-homepage">Home</a>
-                    <a routerLink="/vet-gerenciarclinica">Gerenciar clínica</a>
-                 </div>
+                    <a routerLink="/cli-homepage">Home</a>
+                    <a routerLink="/cli-agendamentos">Agendamentos</a>
+                    <a routerLink="/cli-pet">Pets Registrados</a>
+                </div>
             </div>
         </div>
-
-        <!--Content-->
         <div class="col-md-9">
             <div class="homepage-content">
                 <h2>Complete seu Cadastro</h2>
 
                 <div class="formulario-content">
                 <label for="nome" class="mb-0">Nome:</label>
-                <input [(ngModel)]="vet.nome" id="nome"  (change)="nomeChange($event)"
+                <input [(ngModel)]="cli.nome" id="nome"  (change)="nomeChange($event)"
                     name="nome" type="text" class="form-control form-control-sm formulario-content-input-big">
 
                 <label for="email" class="mb-0" >Email:</label>
-                <input disabled [(ngModel)]="vet.email" id="rg"
+                <input disabled [(ngModel)]="cli.email" id="rg"
                         name="email" type="text" class="form-control form-control-sm formulario-content-input-big">
 
                 <label for="cpf" class="mb-0">CPF:</label>
-                <input disabled [(ngModel)]="vet.cpf" id="cpf"
+                <input disabled [(ngModel)]="cli.cpf" id="cpf"
                         name="cpf" type="text" class="form-control form-control-sm formulario-content-input-big">
                 
                 <label for="senha" class="mb-0 ">Senha:</label>
-                <input [(ngModel)]="vet.senha"  (change)="senhaChange($event)" id="senha"
+                <input [(ngModel)]="cli.senha"  (change)="senhaChange($event)" id="senha"
                             name="senha" type="password" class="form-control form-control-sm formulario-content-input-big">
 
                 <label for="cpf" class="mb-0">Telefone:</label>
-                <input  [(ngModel)]="vet.telefone" id="telefone" (change)="telefoneChange($event)"
+                <input  [(ngModel)]="cli.telefone" id="telefone" (change)="telefoneChange($event)"
                         name="telefone" type="text" class="form-control form-control-sm formulario-content-input-big">
                 
-                <div class="formulario-content-2line">
-                    <div class="formulario-content-2line-group">
-                        <label for="rg" class="mb-0">RG:</label>
-                        <input [(ngModel)]="vet.rg"  (change)="rgChange($event)" id="rg"
-                            name="rg" type="text" class="form-control form-control-sm formulario-content-input-medium-start">
-                    </div>
-                    <div class="formulario-content-2line-group">
-                        <label for="crmv" class="mb-0">CRMV:(Somente Numeros)</label>
-                        <input [(ngModel)]="vet.crmv"  (change)="crmvChange($event)" id="crmv"
-                                name="crmv" type="text" class="form-control form-control-sm formulario-content-input-medium">
-                    </div>
-                </div>
                 
                 <label for="imagem" class="mb-0">Imagem:</label>
-                <input [(ngModel)]="vet.imagem"  (change)="imagemChange($event)" id="imagem"
+                <input [(ngModel)]="cli.imagem"  (change)="imagemChange($event)" id="imagem"
                         name="imagem" type="text" class="form-control form-control-sm formulario-content-input-big">
                 
                 
                 <div class="formulario-content-2line">
                     <div class="formulario-content-2line-group-start">
                         <label for="logradouro" class="mb-0">Logradouro:</label>
-                        <input [(ngModel)]="vet.logradouro"  (change)="logradouroChange($event)" id="logradouro"
+                        <input [(ngModel)]="cli.logradouro"  (change)="logradouroChange($event)" id="logradouro"
                                 name="logradouro" type="text" class="form-control form-control-sm ">
                      </div>
                      <div class="formulario-content-2line-group-end">   
                         <label for="numero" class="mb-0">Numero:(Somente Numeros)</label>
-                        <input [(ngModel)]="vet.numero"  (change)="numeroChange($event)" id="numero"
+                        <input [(ngModel)]="cli.numero"  (change)="numeroChange($event)" id="numero"
                                 name="numero" type="text" class="form-control form-control-sm" >
                     </div>
                 </div>
                 
                 <label for="bairro" class="mb-0">Bairro:</label>
-                <input [(ngModel)]="vet.bairro"  (change)="bairroChange($event)" id="bairro"
+                <input [(ngModel)]="cli.bairro"  (change)="bairroChange($event)" id="bairro"
                                 name="bairro" type="text" class="form-control form-control-sm">
 
                 <div class="formulario-content-2line">
                     <div class="formulario-content-2line-group-start">
                         <label for="cidade" class="mb-0">Cidade:</label>
-                        <input [(ngModel)]="vet.cidade"  (change)="cidadeChange($event)" id="numero"
+                        <input [(ngModel)]="cli.cidade"  (change)="cidadeChange($event)" id="numero"
                                 name="cidade" type="text" class="form-control form-control-sm">
                     </div>
                     <div class="formulario-content-2line-group-end">
                         <label class="mb-0" for="uf">UF:</label>
-                        <select [(ngModel)]="vet.uf" class="form-control form-control-sm mb-2" name="uf" id="uf" (change)="ufChange($event)">
+                        <select [(ngModel)]="cli.uf" class="form-control form-control-sm mb-2" name="uf" id="uf" (change)="ufChange($event)">
                             <option selected disabled value="">Selecione a UF:</option>
                             <option value="RS">RS</option>
                             <option value="RJ">RJ</option>
@@ -99,10 +86,12 @@
                 </div>
             </div>
                 <div class="btn-group">
-                <button routerLink="/vet-homepage" class="btn-outside-border "> Cancelar </button>
-                <button class="btn-inside-color " (click)="editarVeterinario()"> Editar</button>
+                <button routerLink="/cli-homepage" class="btn-outside-border "> Cancelar </button>
+                <button class="btn-inside-color " (click)="editarCliente()"> Editar</button>
               </div>
         </div>
         </div>
-    </div>
+    
+</div>
 </body>
+

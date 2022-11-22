@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Veterinario } from '../model/Veterinario';
-import { VetLogin } from '../model/VetLogin';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { AuthService } from '../service/auth.service';
 })
 export class SignInComponent implements OnInit {
 
-  vetLogin: VetLogin = new VetLogin()
+  vetLogin: UsuarioLogin = new UsuarioLogin()
 
   constructor(
     private auth: AuthService,
@@ -26,15 +26,22 @@ export class SignInComponent implements OnInit {
 
   entrar() {
     this.auth.entrar(this.vetLogin).subscribe({
-      next: (resp: VetLogin) => {
+      next: (resp: UsuarioLogin) => {
         this.vetLogin = resp
         environment.token = this.vetLogin.token
         environment.nome = this.vetLogin.nome
         environment.email = this.vetLogin.email
         environment.cpf = this.vetLogin.cpf
-        environment.idVeterinario = this.vetLogin.idVeterinario
+        environment.id = this.vetLogin.id
         environment.imagem = this.vetLogin.imagem
+
+        if(this.vetLogin.tipo == "veterinario"){
         this.route.navigate(["/vet-homepage"])
+
+        }
+        else if(this.vetLogin.tipo == "cliente"){
+          this.route.navigate(["/cli-homepage"])
+        }
       },
       error: erro =>{
         if(erro.status ==401){

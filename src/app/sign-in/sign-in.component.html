@@ -32,7 +32,14 @@
               <input [(ngModel)]="vetLogin.email" type="email" class="form-control form-field" id="inputEmail" name="email" placeholder="email">
               <label for="inputSenha"></label>
               <input [(ngModel)]="vetLogin.senha" type="password" class="form-control form-field" id="inputSenha" name="senha" placeholder="Password">
+              <label class="mb-0" for="uf">Tipo Usuario: </label>
+                        <select [(ngModel)]="vetLogin.tipo" class="form-control form-control-sm mb-2" name="uf" id="uf">
+                            <option selected disabled value="">Informe o tipo da sua conta</option>
+                            <option value="cliente">Cliente</option>
+                            <option value="veterinario">Veterinario</option>
+                        </select>
               <div class="btn-group">
+
                   <button routerLink="/landing-page" class="btn-outside-border"> Cancel </button>
                   <button class="btn-inside-color" (click)="entrar()"> Sign in</button>
               </div>

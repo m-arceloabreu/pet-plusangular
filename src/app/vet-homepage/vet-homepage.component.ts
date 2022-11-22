@@ -14,7 +14,7 @@ export class VetHomepageComponent implements OnInit {
   vet: Veterinario = new Veterinario()
 
 
-  idVeterinario = environment.idVeterinario
+  idVeterinario = environment.id
   nome = environment.nome
   imagem = environment.imagem
 

@@ -20,6 +20,13 @@ import { VetGerenciarclinicaComponent } from './vet-gerenciarclinica/vet-gerenci
 import { VetRelatoriosComponent } from './vet-relatorios/vet-relatorios.component';
 import { VetAgendamentosComponent } from './vet-agendamentos/vet-agendamentos.component';
 import { VetServicosComponent } from './vet-servicos/vet-servicos.component';
+import { CliHomepageComponent } from './cli-homepage/cli-homepage.component';
+import { CliFinalizarcadastroComponent } from './cli-finalizarcadastro/cli-finalizarcadastro.component';
+import { CliCadastropetComponent } from './cli-cadastropet/cli-cadastropet.component';
+import { CliAgendamentosComponent } from './cli-agendamentos/cli-agendamentos.component';
+import { CliPetComponent } from './cli-pet/cli-pet.component';
+import { CliCriaragendamentoComponent } from './cli-criaragendamento/cli-criaragendamento.component';
+import { CliConfirmaragendamentoComponent } from './cli-confirmaragendamento/cli-confirmaragendamento.component';
 
 
 
@@ -39,6 +46,13 @@ import { VetServicosComponent } from './vet-servicos/vet-servicos.component';
     VetRelatoriosComponent,
     VetAgendamentosComponent,
     VetServicosComponent,
+    CliHomepageComponent,
+    CliFinalizarcadastroComponent,
+    CliCadastropetComponent,
+    CliAgendamentosComponent,
+    CliPetComponent,
+    CliCriaragendamentoComponent,
+    CliConfirmaragendamentoComponent,
   ],
   imports: [
     BrowserModule,

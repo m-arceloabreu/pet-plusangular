@@ -1,0 +1,38 @@
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse">
+                        <img src="{{imagem}} " alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">
+                        {{nome}}
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/cli-homepage">Home</a>
+                    <a routerLink="/cli-agendamentos">Agendamentos</a>
+                    <a routerLink="/cli-pet">Pets Registrados</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="homepage-content">
+                <h2>Agendamentos</h2>
+                <div *ngFor="let agenda of listaAgenda" class="formulario-content-group">
+                    <div class="formulario-content">
+                        <h3>Clinica: {{agenda.clinicaAgenda.nome}}</h3>
+                        <p>Pet: {{cli.pet[agenda.petID -1].nome}}</p>
+                        <p>Data: {{agenda.horario}}</p>
+                        <p>Serviço: {{agenda.clinicaAgenda.servicoClinica[agenda.servicoID - 1].tipoServico}}</p>
+                        <p>Valor: R$ {{agenda.clinicaAgenda.servicoClinica[agenda.servicoID -1].valor}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

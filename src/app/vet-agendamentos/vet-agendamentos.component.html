@@ -11,6 +11,7 @@
                     <label class="nomeUsuario">{{clinica.nome}}</label>
                 </div>
                 <div class="col-md-12">
+                    <a routerLink="/vet-homepage">Home</a>
                     <a routerLink="/vet-gerenciarclinica">Gerenciar clínica</a>
                 </div>
             </div>
@@ -23,19 +24,12 @@
                 <div *ngFor="let agenda1 of listaAgenda" class="formulario-content-group">
                     <div class="formulario-content">
                     <h3>Cliente: {{agenda1.clienteAgenda.nome}}</h3>
+                    <p >Pet: {{agenda1.clienteAgenda.pet[agenda1.petID -1].nome}}</p>
                     <p>Data: {{agenda1.horario}}</p>
                     <p>Serviço: {{clinica.servicoClinica[(agenda1.servicoID -1)].tipoServico}}</p>
                     <p>Valor: R$ {{clinica.servicoClinica[(agenda1.servicoID -1)].valor}}</p>
                     </div>
-
-
-
                 </div>
-
-
-
-
-
             </div>
         </div>
     </div>

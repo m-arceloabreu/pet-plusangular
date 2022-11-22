@@ -1,0 +1,45 @@
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse">
+                        <img src="{{imagem}} " alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">
+                        {{nome}}
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/cli-homepage">Home</a>
+                    <a routerLink="/cli-agendamentos">Agendamentos</a>
+                    <a routerLink="/cli-pet">Pets Registrados</a>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-9 ">
+            <div class="homepage-content">
+                <h2>Seus Pets Registrados</h2>
+
+                <div class="homepage-content-umpet" *ngFor="let pet of listaPet">
+                    <h3>{{pet.nome}}</h3>
+                    <div class="umpet-group">
+                        <div class="umpet-divisao">
+                            <p>Espécie: {{pet.especie}}</p>
+                            <p>Raça: {{pet.raca}}</p>
+                        </div>
+                        <div class="umpet-divisao">
+                            <p>Idade: {{pet.idade}}</p>
+                            <p>Porte: {{pet.porte}}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>

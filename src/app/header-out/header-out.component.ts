@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 export class HeaderOutComponent implements OnInit {
 
   constructor(
-    private router: Router,
+    private route: Router,
     private authService: AuthService
   ) { }
 
@@ -19,6 +19,14 @@ export class HeaderOutComponent implements OnInit {
   }
 
   sairBtn(){
+    environment.clinicaId= 0
+    environment.cpf=''
+    environment.email=''
+    environment.imagem=''
+    environment.nome=''
+    environment.email = ''
+
     environment.token = ''
+    this.route.navigate(["/sign-in"])
   }
 }

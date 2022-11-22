@@ -1,10 +1,11 @@
-export class VetLogin{
+export class UsuarioLogin{
 
-    public idVeterinario: number
+    public id: number
     public nome: string
     public email: string
     public senha: string
     public cpf: string
     public imagem: string
+    public tipo: string
     public token: string
 }

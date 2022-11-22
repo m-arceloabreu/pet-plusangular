@@ -26,18 +26,17 @@ export class VetAgendamentosComponent implements OnInit {
   serv: Servico = new Servico();
 
   nomeCliente:String
-
+  nomePet: String
   listaAgenda: Agenda[]
   listaClinica: Clinica[]
   listaCliente: Cliente[] = []
 
-  idVeterinario = environment.idVeterinario
+  idVeterinario = environment.id
   nome = environment.nome
   imagem = environment.imagem
   token = environment.token
 
 
-   nomePet: String
    idade: number
 
   constructor(

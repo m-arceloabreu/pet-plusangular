@@ -17,7 +17,7 @@ export class VetCadastroClinicaComponent implements OnInit {
   clinica: Clinica = new Clinica();
   
   token = environment.token
-  idVet = environment.idVeterinario 
+  idVet = environment.id 
   nome = environment.nome
   email = environment.email;
   imagem = environment.imagem;

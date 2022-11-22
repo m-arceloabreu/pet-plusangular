@@ -4,6 +4,8 @@ import { Pet } from "./Pet"
 export class Cliente{
 
     public idClient: number
+    public email: string
+    public senha: string
     public nome: string
     public cpf: string
     public telefone: string

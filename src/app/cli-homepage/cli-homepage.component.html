@@ -1,0 +1,64 @@
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse">
+                        <img src="{{imagem}} " alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">
+                        {{nome}}
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/cli-homepage">Home</a>
+                    <a routerLink="/cli-agendamentos">Agendamentos</a>
+                    <a routerLink="/cli-pet">Pets Registrados</a>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-9 ">
+            <div class="homepage-content">
+                <h2>Acesse seu perfil</h2>
+                <a routerLink="/cli-finalizarcadastro"> Meu Perfil</a>
+            </div>
+            <div class="homepage-content">
+                <h2>Cadastre seu Pet!</h2>
+                <a routerLink="/cli-cadastropet"> Meu Pet</a>
+            </div>
+            <!-- ------------------  PARTE DE MOSTRAR CLINICAS  ---------------- -->
+            <div class="homepage-content-clinica">
+                <h2>Escolha a clinica que mais se adapta a você!</h2>
+                <!--INICIO UMA CLINICA-->
+                <div *ngFor="let clinica of listaClinica" class="homepage-content-clinica-group">
+                    
+                    <div class="homepage-content-start">
+                        <div class="homepage-content-start-text-group">
+                        <h2>{{clinica.nome}}</h2>
+                        <a (click)="btnFazerAgendamento(clinica.idClinica)" class="homepage-content-start-link">Marcar Agendamento</a>
+                        </div>
+                        <div class="homepage-content-start-text-group2">
+                        <p>{{clinica.logradouro}}, {{clinica.numero}} - {{clinica.bairro}}, {{clinica.cidade}} - {{clinica.uf}}</p>
+                        </div>
+                    </div>
+                    <div  class="homepage-content-middle">
+                        <p class="homepage-content-middle-text">{{clinica.servicoClinica[0].tipoServico}}</p>
+                        <p class="homepage-content-middle-text">{{clinica.servicoClinica[1].tipoServico}}</p>
+                        <p class="homepage-content-middle-text">{{clinica.servicoClinica[2].tipoServico}}</p>
+                        
+                    </div>
+                    <div class="homepage-content-end ">
+                        <img src="{{clinica.imagem}}" alt="">
+                    </div>
+                </div>
+            <!--FIM UMA CLINICA-->
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>

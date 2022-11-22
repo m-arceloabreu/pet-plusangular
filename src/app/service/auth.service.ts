@@ -3,8 +3,9 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
+import { Cliente } from "../model/Cliente";
 
-import{VetLogin} from '../model/VetLogin';
+import{UsuarioLogin} from '../model/UsuarioLogin';
 import{Veterinario} from '../model/Veterinario';
 
 
@@ -24,11 +25,14 @@ export class AuthService{
       }
   }
 
-  entrar(VetLogin: VetLogin): Observable<VetLogin>{
-    return this.http.post<VetLogin>('http://localhost:8080/veterinario/logar', VetLogin)
+  entrar(VetLogin: UsuarioLogin): Observable<UsuarioLogin>{
+    return this.http.post<UsuarioLogin>('http://localhost:8080/usuario/logar', VetLogin)
   }
-  cadastrar(Veterinario: Veterinario): Observable<Veterinario>{
+  cadastrarVet(Veterinario: Veterinario): Observable<Veterinario>{
     return this.http.post<Veterinario>('http://localhost:8080/veterinario/cadastrar', Veterinario)
+  }
+  cadastrarCli(Cliente: Cliente): Observable<Cliente>{
+      return this.http.post<Cliente>('http://localhost:8080/cliente/cadastrar', Cliente)
   }
 
   atualizar(Veterinario: Veterinario): Observable<Veterinario>{

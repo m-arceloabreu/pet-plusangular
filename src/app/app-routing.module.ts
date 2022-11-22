@@ -1,5 +1,12 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CliAgendamentosComponent } from './cli-agendamentos/cli-agendamentos.component';
+import { CliCadastropetComponent } from './cli-cadastropet/cli-cadastropet.component';
+import { CliConfirmaragendamentoComponent } from './cli-confirmaragendamento/cli-confirmaragendamento.component';
+import { CliCriaragendamentoComponent } from './cli-criaragendamento/cli-criaragendamento.component';
+import { CliFinalizarcadastroComponent } from './cli-finalizarcadastro/cli-finalizarcadastro.component';
+import { CliHomepageComponent } from './cli-homepage/cli-homepage.component';
+import { CliPetComponent } from './cli-pet/cli-pet.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -22,7 +29,16 @@ const routes: Routes = [
   {path: "vet-gerenciarclinica", component: VetGerenciarclinicaComponent},
   {path: "vet-relatorios", component: VetRelatoriosComponent},
   {path: "vet-agendamentos", component: VetAgendamentosComponent},
-  {path: "vet-servicos", component:VetServicosComponent}
+  {path: "vet-servicos", component:VetServicosComponent},
+  {path: "cli-homepage", component: CliHomepageComponent},
+  {path: "cli-agendamentos", component:CliAgendamentosComponent},
+  {path: "cli-cadastropet", component:CliCadastropetComponent},
+  {path: "cli-finalizarcadastro", component:CliFinalizarcadastroComponent},
+  {path: "cli-pet", component: CliPetComponent},
+  {path: "cli-criaragendamento", component: CliCriaragendamentoComponent},
+  {path: "cli-confirmaragendamento", component: CliConfirmaragendamentoComponent}
+
+
 ];
 
 @NgModule({

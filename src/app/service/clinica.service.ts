@@ -21,7 +21,7 @@ import { Clinica } from "../model/Clinica";
     }
   
     getAllClinica(): Observable<Clinica[]>{
-      return this.http.get<Clinica[]>('http://localhost:8080/clinica/', this.token)
+      return this.http.get<Clinica[]>('http://localhost:8080/clinica', this.token)
     }
   
     getByIdClinica(id: Number): Observable<Clinica>{
@@ -34,4 +34,5 @@ import { Clinica } from "../model/Clinica";
     deleteClinica(id: number) {
       return this.http.delete<Clinica>(`http://localhost:8080/clinica/${id}`, this.token)
     }
+
   }

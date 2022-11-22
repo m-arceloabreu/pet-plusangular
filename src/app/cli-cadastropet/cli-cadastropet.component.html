@@ -1,0 +1,60 @@
+
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse">
+                        <img src="{{cli.imagem}} " alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">
+                        {{cli.nome}} 
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/cli-homepage">Home</a>
+                    <a routerLink="/cli-agendamentos">Agendamentos</a>
+                    <a routerLink="/cli-pet">Pets Registrados</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="homepage-content">
+                <h2>Cadastre seu pet</h2>
+
+                <div class="formulario-content">
+                <label for="nome" class="mb-0">Nome:</label>
+                <input [(ngModel)]="pet.nome" id="nome" 
+                    name="nome" type="text" class="form-control form-control-sm formulario-content-input-big">
+
+                <label for="email" class="mb-0" >Idade:</label>
+                <input  [(ngModel)]="pet.idade" id="rg"
+                        name="email" type="number" class="form-control form-control-sm formulario-content-input-big">
+
+                <label for="cpf" class="mb-0">Especie:</label>
+                <input  [(ngModel)]="pet.especie" id="cpf"
+                        name="cpf" type="text" class="form-control form-control-sm formulario-content-input-big">
+                
+
+                <label for="cpf" class="mb-0">Porte:</label>
+                <input  [(ngModel)]="pet.porte" id="telefone"
+                        name="telefone" type="text" class="form-control form-control-sm formulario-content-input-big">
+                
+                
+                <label for="imagem" class="mb-0">Raça:</label>
+                <input [(ngModel)]="pet.raca"   id="imagem"
+                        name="imagem" type="text" class="form-control form-control-sm formulario-content-input-big">
+                
+            </div>
+                <div class="btn-group">
+                <button routerLink="/cli-homepage" class="btn-outside-border "> Cancelar </button>
+                <button class="btn-inside-color " (click)="cadastroPet()"> Cadastrar</button>
+              </div>
+        </div>
+        </div>
+    
+</div>
+</body>
+

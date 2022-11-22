@@ -1,0 +1,56 @@
+<body class="d-flex justify-content-center">
+    <div class="row container">
+        <div class="col-md-3 sidemenu">
+            <div class="row item1">
+                <div class="col-md-12 eclipse-align">
+                    <div class="eclipse">
+                        <img src="{{imagem}} " alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label class="nomeUsuario">
+                        {{nome}}
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <a routerLink="/cli-homepage">Home</a>
+                    <a routerLink="/cli-agendamentos">Agendamentos</a>
+                    <a routerLink="/cli-pet">Pets Registrados</a>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-9 ">
+            <div class="homepage-content">
+                <h2>Marcar Agendamento</h2>
+
+                <div class="formulario-content">
+                    <p>Nome Clínica:</p>
+                    <input disabled type="text" value="{{clinica.nome}}" class="form-control form-control-sm">
+                    <p>Cliente:</p>
+                    <input disabled type="text" value="{{cli.nome}}" class="form-control form-control-sm">
+                    <p>Data:</p>
+                    <input type="date" id="start" name="trip-start" value="2018-12-01" min="2022-12-01" max="2022-12-31"
+                        (change)="dataChange($event)" class="form-control form-control-sm">
+                        <p>Hora:</p>
+                        <input type="time" id="appt" name="appt" min="09:00" max="18:00" (change)="horaChange($event)"
+                        required class="form-control form-control-sm">
+                    <p> Servico:</p>
+                    <select [(ngModel)]="agenda.servicoID" class="form-control form-control-sm mb-2" name="uf"
+                        id="servicoID" laceholder="Serviço:">
+                        <option *ngFor="let servico of listaServico" value="{{servico.idServico}}">
+                            {{servico.tipoServico}} | R$ {{servico.valor}}</option>
+                    </select>
+                    <p>Pet:</p>
+                    <select [(ngModel)]="agenda.petID" class="form-control form-control-sm mb-2" name="uf"
+                        id="servicoID" placeholder="Serviço:">
+                        <option *ngFor="let pet of listaPet" value="{{pet.idPet}}">{{pet.nome}}</option>
+                    </select>
+                </div>
+                    <div class="btn-group">
+                    <button routerLink="/cli-homepage" class="btn-outside-border "> Cancelar </button>
+                    <button class="btn-inside-color " (click)="criarAgendamento()"> Agendar</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -27,11 +27,17 @@
           <div class="sign-in__form-sign-in">
             <h1> Register here!</h1>
             <div class="mb-3 form-size">
-              <input [(ngModel)]="vet.nome" type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="Name">
-              <input [(ngModel)]="vet.email" type="email" class="form-control form-field" id="exampleFormControlInput1" placeholder="name@example.com">
-              <input (input)='confirmSenha($event)' type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Password">
-              <input [(ngModel)]="vet.senha" type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Confirm Password">
-              <input [(ngModel)]="vet.cpf" type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="CPF">
+              <input (input)='getNome($event)' type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="Name">
+              <input (input)='getEmail($event)' type="email" class="form-control form-field" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input (input)='getSenha($event)' type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Password">
+              <input (input)='confirmSenha($event)' type="password" class="form-control form-field" id="exampleFormControlInput2" placeholder="Confirm Password">
+              <input (input)='getCpf($event)' type="text" class="form-control form-field" id="exampleFormControlInput1" placeholder="CPF">
+              <label class="mb-0" for="tipoUsuario">Tipo Usuario: </label>
+                        <select (input)='getTipousuario($event)' class="form-control form-control-sm mb-2" name="tipoUsuario" id="tipoUsuario">
+                            <option selected disabled value="">Informe o tipo da sua conta</option>
+                            <option value="cliente">Cliente</option>
+                            <option value="veterinario">Veterinario</option>
+                        </select>
               <div class="btn-group">
                 <button routerLink="/sign-in" class="btn-outside-border "> Cancel </button>
                 <button class="btn-inside-color " (click)="cadastrar()"> Sign Up</button>
